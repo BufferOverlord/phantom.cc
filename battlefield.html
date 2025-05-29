@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buy Valorant Cheat</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      color: #e0e0e0;
+    }
+
+    .form-box {
+      background-color: #111831;
+      border: 2px solid #00ffe7;
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.15);
+      margin-bottom: 30px;
+    }
+
+    .form-box input {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      width: 250px;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+
+    .form-box button {
+      padding: 10px 15px;
+      background-color: #00ffe7;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #111831;
+      cursor: pointer;
+    }
+
+    .btc-section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btc-address-box {
+      display: flex;
+      align-items: center;
+      background-color: #111831;
+      border: 2px solid #00ffe7;
+      border-radius: 8px;
+      padding: 10px 15px;
+      gap: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 231, 0.15);
+    }
+
+    .btc-address-text {
+      font-family: monospace;
+      font-size: 0.9rem;
+      color: #00ffe7;
+      user-select: all;
+    }
+
+    .copy-icon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .copied-msg {
+      color: #00ffe7;
+      font-size: 0.85rem;
+      display: none;
+    }
+
+    .check-popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #111831;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #00ffe7;
+      box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(-20px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .check-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .check-popup img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .check-popup span {
+      color: #00ffe7;
+      font-weight: bold;
+    }
+
+    .timer {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00ffe7;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #00ffe7;
+    }
+  </style>
+  <script>
+    let countdownInterval;
+
+    function revealBTCSection() {
+      const email = document.getElementById("email-input").value.trim();
+      if (!email || !email.includes("@")) {
+        alert("Please enter a valid email.");
+        return;
+      }
+
+      document.getElementById("email-form").style.display = "none";
+      document.getElementById("btc-section").style.display = "flex";
+
+      const check = document.getElementById("check-popup");
+      check.classList.add("show");
+      setTimeout(() => {
+        check.classList.remove("show");
+      }, 2000);
+
+      startTimer(24 * 60 * 60); // 24 hours in seconds
+    }
+
+    function startTimer(seconds) {
+      const timerEl = document.getElementById("timer");
+      let remaining = seconds;
+
+      countdownInterval = setInterval(() => {
+        const hrs = String(Math.floor(remaining / 3600)).padStart(2, '0');
+        const mins = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
+        const secs = String(remaining % 60).padStart(2, '0');
+        timerEl.textContent = `Time remaining: ${hrs}:${mins}:${secs}`;
+        remaining--;
+
+        if (remaining < 0) {
+          clearInterval(countdownInterval);
+          timerEl.textContent = "⏰ Time expired";
+        }
+      }, 1000);
+    }
+
+    function copyBTC() {
+      const address = "bc1ps8yrmjyxaewk2e7w9nszl4acz294dy400dcpkx00px4czddecw2qny6zuf";
+      navigator.clipboard.writeText(address).then(() => {
+        const msg = document.getElementById("copied-msg");
+        msg.style.display = "inline";
+        setTimeout(() => { msg.style.display = "none"; }, 2000);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="back-button" onclick="history.back()">
+    <img src="backarrow.png" alt="Back">
+  </div>
+
+  <div id="check-popup" class="check-popup">
+    <img src="check.png" alt="Check" />
+    <span>Sent</span>
+  </div>
+
+  <header>
+    <h1 style="text-align:center;">Buy BattleField Cheat</h1>
+  </header>
+
+  <main class="container">
+    <div id="email-form" class="form-box">
+      <p>Enter your email to receive the product after payment:</p>
+      <input type="email" id="email-input" placeholder="your@email.com" />
+      <button onclick="revealBTCSection()">Continue</button>
+    </div>
+
+    <div id="btc-section" class="btc-section">
+      <div id="timer" class="timer">Time remaining: 24:00:00</div>
+
+      <h2>Price: €25 (~0.00025920 BTC)</h2>
+
+      <img src="btc.png" alt="BTC QR Code" style="width: 180px; height: 180px;" />
+
+      <div class="btc-address-box">
+        <span class="btc-address-text">
+          bc1ps8yrmjyxaewk2e7w9nszl4acz294dy400dcpkx00px4czddecw2qny6zuf
+        </span>
+        <img src="clip.png" alt="Copy" class="copy-icon" onclick="copyBTC()" />
+      </div>
+
+      <div id="copied-msg" class="copied-msg">✅ Address copied!</div>
+
+      <p style="margin-top: 20px; color: #ccc; max-width: 400px; text-align: center;">
+        After payment, we will send your product (.zip) directly to the email address you provided.
+        Please allow 15–30 minutes for processing.
+      </p>
+    </div>
+  </main>
+</body>
+</html>

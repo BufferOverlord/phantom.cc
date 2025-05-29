@@ -1,0 +1,228 @@
+/* Sørg for at html og body fylder hele siden */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(5, 10, 48, 1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Hovedoverskrift med afstand fra toppen */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  padding-top: 100px;
+  color: #e0e0e0;
+  text-shadow: 0 0 10px #00ffe7;
+  text-align: center;
+}
+
+/* Grid layout for produkter */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  padding: 60px 40px 80px;
+}
+
+/* Individuelle produktkort */
+.product-card {
+  background-color: #111831;
+  border: 2px solid #00ffe7;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.1);
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00ffe7;
+}
+
+/* Produktbilleder */
+.product-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.1);
+}
+
+/* Produkttitel */
+.product-card h2 {
+  color: #00ffe7;
+  margin-bottom: 10px;
+}
+
+/* Produktbeskrivelse */
+.product-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* Login-sektion */
+.login-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #111831;
+  border: 2px solid #00ffe7;
+  border-radius: 10px;
+  padding: 15px 25px;
+  color: #00ffe7;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
+}
+
+.login-button:hover {
+  background-color: #00ffe7;
+  color: #111831;
+  box-shadow: 0 0 20px #00ffe7;
+}
+
+.login-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.login-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+/* Tilbage-knap */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.back-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111831;
+  color: #00ffe7;
+  border: 2px solid #00ffe7;
+  border-radius: 12px;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
+}
+
+.box:hover {
+  background-color: #00ffe7;
+  color: #111831;
+  box-shadow: 0 0 20px #00ffe7;
+}
+
+
+.valorant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 20px;
+}
+
+.valorant-logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.btc-qr {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #00ffe7;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.2);
+}
+
+.btc-address-box {
+  display: flex;
+  align-items: center;
+  background-color: #111831;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #00ffe7;
+  color: #00ffe7;
+  font-weight: bold;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.copy-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.copy-icon:hover {
+  transform: scale(1.1);
+}
+
+.buy-button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #00ffe7;
+  color: #111831;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #00c2b3;
+}
